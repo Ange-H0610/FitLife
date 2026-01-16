@@ -38,4 +38,6 @@ function afficherPoids() {
   });
 }
 
-afficherPoids();
+if (document.getElementById("poidsJour")) {
+  afficherPoids();
+}

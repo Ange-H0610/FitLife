@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>FitLife Coaching</title>
   <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="logo\fitlife-logo.png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -12,44 +13,81 @@
 
 <header class="navbar">
   <div class="logo-container">
-    <img src="logo\fitlife-logo.png" class="logo-img" alt="FitLife Logo">
+    <img src="logo/fitlife-logo.png" class="logo-img" alt="FitLife Logo">
   </div>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Coaching</a>
-    <a href="#">Programmes</a>
-    <a href="#">Nutrition</a>
-    <a href="#">Témoignages</a>
-    <a href="#">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 
-<section class="hero">
+
+<section class="hero" id="home">
+
   <div class="overlay">
     <h1>FitLife Coaching</h1>
     <p>Transforme ton corps. Transforme ta vie.</p>
-    <a class="cta" href="#">Commencer maintenant</a>
+  <a class="cta" href="#programmes">Commencer maintenant</a>
+
   </div>
 </section>
 
-<section class="section">
-  <h2>Nos Services</h2>
+<section class="section" id="coaching">
+  <h2>Coaching personnalisé FitLife</h2>
+  <p>
+    Chez FitLife, nous croyons qu’un vrai changement commence par un accompagnement humain,
+    structuré et adapté à chaque personne.
+  </p>
+
   <div class="grid">
-    <div class="card">Coaching 1-to-1 personnalisé</div>
-    <div class="card">Programmes sportifs adaptés</div>
-    <div class="card">Plans nutritionnels</div>
+    <div class="card">
+      <span>01</span>
+      <h3>Analyse complète</h3>
+      <p>
+        Évaluation de votre condition physique, habitudes alimentaires,
+        objectifs et contraintes personnelles.
+      </p>
+    </div>
+
+    <div class="card">
+      <span>02</span>
+      <h3>Suivi continu</h3>
+      <p>
+        Ajustement hebdomadaire du programme, motivation constante
+        et accompagnement étape par étape.
+      </p>
+    </div>
+
+    <div class="card">
+      <span>03</span>
+      <h3>Résultats durables</h3>
+      <p>
+        Méthodes basées sur la science pour perdre du poids
+        sans frustration ni effet yo-yo.
+      </p>
+    </div>
   </div>
 </section>
 
-<section class="section dark">
+
+<section class="section dark" id="nutrition">
+
   <h2>Pourquoi FitLife ?</h2>
   <p>Un accompagnement humain, scientifique et durable pour des résultats réels.</p>
+</section>
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email : contact@fitlife.com</p>
 </section>
 
 <footer>
   © 2026 FitLife Coaching — Tous droits réservés
 </footer>
+<script src="script.js"></script>
 
 </body>
 </html>
