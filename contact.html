@@ -5,14 +5,22 @@
   <title>Contact — FitLife</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="logo\fitlife-logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
 
 <header class="navbar">
   <div class="logo-container">
-    <img src="logo/fitlife-logo.png" class="logo-img">
+    <img src="logo/fitlife-logo.png" class="logo-img" alt="FitLife Logo">
   </div>
-  <nav>
+
+  <div class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="coaching.html">Coaching</a>
     <a href="programmes.html">Programmes</a>
@@ -21,6 +29,7 @@
   </nav>
 </header>
 
+
 <section class="section alt">
   <h2>Contactez FitLife</h2>
   <p>
@@ -28,18 +37,20 @@
     Notre équipe vous répond rapidement.
   </p>
 
-  <form class="card" style="max-width:500px;margin:auto;">
-    <input type="text" placeholder="Nom complet" required>
-    <input type="email" placeholder="Adresse email" required>
-    <textarea placeholder="Votre message" style="width:100%;height:120px;"></textarea>
-    <button class="cta" type="submit">Envoyer le message</button>
-  </form>
+<form class="card" id="contactForm" style="max-width:500px;margin:auto;">
+  <input type="text" id="contactName" placeholder="Nom complet" required>
+  <input type="email" id="contactEmail" placeholder="Adresse email" required>
+  <textarea id="contactMessage" placeholder="Votre message" style="width:100%;height:120px;" required></textarea>
+  <button class="cta" type="submit">Envoyer le message</button>
+</form>
+
+
 </section>
 
 
 <footer>
   © 2026 FitLife Coaching
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
