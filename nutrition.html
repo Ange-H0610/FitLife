@@ -4,65 +4,89 @@
   <meta charset="UTF-8">
   <title>Nutrition — FitLife</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="logo\fitlife-logo.png">
+  <link rel="icon" href="logo/fitlife-logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
 </head>
 <body>
 
 <header class="navbar">
   <div class="logo-container">
-    <img src="logo/fitlife-logo.png" class="logo-img" alt="FitLife Logo">
+    <img src="logo/fitlife-logo.png" class="logo-img">
   </div>
-
-  <div class="menu-toggle" id="menuToggle">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-
-  <nav id="navMenu">
+  <nav>
     <a href="index.html">Home</a>
     <a href="coaching.html">Coaching</a>
     <a href="programmes.html">Programmes</a>
-    <a href="nutrition.html">Nutrition</a>
+    <a href="nutrition.html" class="active">Nutrition</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
+<section class="hero-nutrition">
+  <h1>Nutrition & Performance</h1>
+  <p>70% de vos résultats viennent de l’alimentation. Nous vous apprenons à manger mieux sans régime extrême.</p>
+</section>
 
 <section class="section">
-  <h2>Nutrition & Équilibre</h2>
-  <p>
-    La nutrition représente 70% des résultats.
-    Nous vous aidons à manger mieux sans régime extrême.
-  </p>
+  <h2>Nos Approches Nutritionnelles</h2>
 
-<div class="card">
-  <i class="fa-solid fa-utensils"></i>
-  <h3>Plans personnalisés</h3>
-  <p>Menus adaptés à votre culture et budget.</p>
-</div>
+  <div class="grid">
+    <div class="card">
+      <h3>Plans personnalisés</h3>
+      <p>Menus adaptés à votre objectif (perte de poids, prise de masse, bien-être), votre budget et votre culture alimentaire.</p>
+    </div>
 
     <div class="card">
       <h3>Éducation nutritionnelle</h3>
-      <p>
-        Comprendre les aliments pour faire les bons choix au quotidien.
-      </p>
+      <p>Comprendre les nutriments essentiels : protéines, lipides, glucides, vitamines et minéraux.</p>
     </div>
 
     <div class="card">
       <h3>Suivi alimentaire</h3>
-      <p>
-        Ajustements progressifs pour des résultats durables.
-      </p>
+      <p>Ajustements hebdomadaires avec un coach pour garantir des résultats durables.</p>
     </div>
   </div>
 </section>
 
+<section class="section bg-light">
+  <h2>Comprendre vos besoins</h2>
+
+  <div class="two-columns">
+    <div>
+      <h3>Macronutriments</h3>
+      <ul>
+        <li><b>Protéines</b> : construction musculaire</li>
+        <li><b>Glucides</b> : énergie du corps</li>
+        <li><b>Lipides</b> : hormones & santé cellulaire</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Micronutriments</h3>
+      <p>Vitamines & minéraux essentiels pour la récupération, l’immunité et les performances.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Erreurs fréquentes</h2>
+  <ul class="list-check">
+    <li>Sauter les repas</li>
+    <li>Supprimer les glucides</li>
+    <li>Diètes trop strictes</li>
+    <li>Consommation excessive de compléments</li>
+  </ul>
+</section>
+
+<section class="cta-section">
+  <h2>Besoin d’un plan alimentaire complet ?</h2>
+  <p>Nous réalisons des plans sur mesure avec suivi hebdomadaire.</p>
+  <a href="contact.html" class="cta">Contacter un coach</a>
+</section>
 
 <footer>
   © 2026 FitLife Coaching
 </footer>
-<script src="script.js"></script>
+
 </body>
 </html>

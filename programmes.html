@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <title>Programmes — FitLife</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="logo\fitlife-logo.png">
+  <link rel="icon" href="logo/fitlife-logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
 
 <header class="navbar">
@@ -23,48 +23,73 @@
   <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="coaching.html">Coaching</a>
-    <a href="programmes.html">Programmes</a>
+    <a href="programmes.html" class="active">Programmes</a>
     <a href="nutrition.html">Nutrition</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<section class="section alt">
-  <h2>Nos Programmes</h2>
-  <p>
-    Des programmes conçus pour s’adapter à tous les niveaux,
-    du débutant au confirmé.
-  </p>
+<!-- ================= HERO ================= -->
+<section class="hero-nutrition">
+  <h1>Programmes d'entraînement</h1>
+  <p>Progressifs, efficaces et adaptés à tous les niveaux — du débutant au confirmé.</p>
+</section>
+
+<!-- ================= PROGRAMMES ================= -->
+<section class="section alt" id="programmes">
+  <h2>Choisissez votre objectif</h2>
+  <p>Chaque programme est construit par un coach certifié avec suivi et ajustement mensuel.</p>
 
   <div class="grid">
+
     <div class="card">
-      <h3>Perte de poids</h3>
-      <p>
-        Brûlage de graisses, cardio progressif et rééquilibrage alimentaire.
-      </p>
+      <i class="fa-solid fa-fire-flame-curved"></i>
+      <h3>Perte de poids <span class="badge">Populaire</span></h3>
+      <p>Cardio progressif, HIIT, travail métabolique et nutrition ciblée.</p>
+      <a class="cta" href="contact.html">Commencer</a>
     </div>
 
     <div class="card">
+      <i class="fa-solid fa-heart-pulse"></i>
       <h3>Remise en forme</h3>
-      <p>
-        Amélioration de l’endurance, mobilité et bien-être général.
-      </p>
+      <p>Endurance, mobilité, respiration et relance du métabolisme.</p>
+      <a class="cta" href="contact.html">Commencer</a>
     </div>
 
     <div class="card">
+      <i class="fa-solid fa-dumbbell"></i>
       <h3>Musculation</h3>
-      <p>
-        Développement de la force, tonicité et posture.
-      </p>
+      <p>Force, volume musculaire et posture avec charges progressives.</p>
+      <a class="cta" href="contact.html">Commencer</a>
     </div>
+
   </div>
 </section>
-<h3>Perte de poids <span class="badge">Populaire</span></h3>
 
+<!-- ================= OBJECTIFS ================= -->
+<section class="section">
+  <h2>Ce que vous allez obtenir</h2>
+
+  <ul class="list-check">
+    <li>Programmes adaptés au niveau</li>
+    <li>Entraînements détaillés (PDF + vidéos)</li>
+    <li>Suivi et ajustements mensuels</li>
+    <li>Conseils nutritionnels inclus</li>
+    <li>Objectifs mesurés avec progression réelle</li>
+  </ul>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-section">
+  <h2>Prêt à transformer votre physique ?</h2>
+  <p>Un programme adapté change tout. On commence quand ? 💪</p>
+  <a href="contact.html" class="cta">Demander un suivi</a>
+</section>
 
 <footer>
   © 2026 FitLife Coaching
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>

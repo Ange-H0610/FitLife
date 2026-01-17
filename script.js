@@ -72,29 +72,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-// ===== FORMULAIRE CONTACT =====
+// ===== CONTACT FORM =====
 const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", function(e) {
-    e.preventDefault(); // Empêche le rechargement de page
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    // Récupère les valeurs
-    const name = document.getElementById("contactName").value.trim();
-    const email = document.getElementById("contactEmail").value.trim();
-    const message = document.getElementById("contactMessage").value.trim();
+    const name = contactName.value.trim();
+    const email = contactEmail.value.trim();
+    const message = contactMessage.value.trim();
 
-    // Vérification simple
     if (!name || !email || !message) {
-      alert("Merci de remplir tous les champs.");
+      formStatus.style.color = "#ef4444";
+      formStatus.textContent = "Veuillez remplir tous les champs.";
       return;
     }
 
-    // Ici tu peux envoyer les données à un serveur si tu veux (AJAX/fetch)
-    // Pour l’instant, on simule juste l’envoi
-    alert(`Merci ${name}, votre message a été envoyé !`);
+    formStatus.style.color = "#22c55e";
+    formStatus.textContent = "Message envoyé avec succès ✅";
 
-    // Reset du formulaire
     contactForm.reset();
   });
 }

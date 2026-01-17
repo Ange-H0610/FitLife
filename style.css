@@ -451,11 +451,333 @@ form textarea:focus {
 body.menu-open {
   overflow: hidden;
 }
-.section.alt .card {
-  position: relative; /* déjà */
-  z-index: 2;         /* met le formulaire au-dessus */
+
+/* ===============================
+   CONTACT PAGE — VERSION CLEAN
+================================ */
+
+.contact-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #020617, #111827);
+  padding: 80px 20px;
 }
 
-.section.alt {
-  position: relative; /* pour que z-index fonctionne correctement */
+.contact-box {
+  background: white;
+  max-width: 520px;
+  width: 100%;
+  padding: 50px 40px;
+  border-radius: 30px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.contact-box h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-box p {
+  color: #64748b;
+  margin-bottom: 35px;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f1f5f9;
+  padding: 14px 18px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.field i {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.field input,
+.field textarea {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+#formStatus {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contact-box {
+    padding: 35px 25px;
+  }
+}
+/* ===== CONTACT FORM ===== */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.contact-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.field i {
+  color: var(--primary);
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+/* ====== BURGER ====== */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.6rem;
+}
+
+#navMenu a.active {
+  color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #navMenu.active {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background: #000;
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+/* ===============================
+   CONTACT PAGE REFINED
+================================ */
+.contact-wrapper {
+  padding: 80px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+  background: var(--light);
+}
+
+.contact-info {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+  animation: fadeUp 0.6s ease;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: var(--gray);
+  margin-bottom: 12px;
+  line-height: 1.5rem;
+}
+
+.contact-info i {
+  color: var(--primary);
+  margin-right: 10px;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0 25px;
+}
+
+.socials i {
+  font-size: 1.3rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.socials i:hover {
+  transform: translateY(-3px);
+  color: var(--primary);
+}
+
+.contact-box {
+  background: white;
+  padding: 45px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  animation: fadeUp 0.8s ease;
+}
+
+.contact-box h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.contact-box p {
+  color: var(--gray);
+  margin-bottom: 25px;
+}
+
+.contact-box button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* MAP SECTION */
+.map-section iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  margin-top: 60px;
+  border-radius: 20px;
+}
+
+/* ===== RESPONSIVE CONTACT ===== */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    padding: 50px 15px;
+  }
+  .contact-box, .contact-info {
+    padding: 30px 25px;
+  }
+}
+/* ===============================
+   NUTRITION PAGE REFINED
+================================ */
+
+.hero-nutrition {
+  padding: 120px 20px 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #020617, #111827);
+  color: white;
+}
+
+.hero-nutrition h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-nutrition p {
+  font-size: 1.1rem;
+  color: #cbd5f5;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.two-columns h3 {
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.list-check {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.list-check li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 90px 20px;
+  background: var(--dark);
+  color: white;
+  border-radius: 60px 60px 0 0;
+}
+
+.cta-section p {
+  color: #cbd5f5;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* ===== RESPONSIVE NUTRITION ===== */
+@media (max-width: 900px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+  .hero-nutrition h1 {
+    font-size: 2rem;
+  }
+  .hero-nutrition p {
+    font-size: 1rem;
+  }
 }
