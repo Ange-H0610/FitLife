@@ -795,3 +795,159 @@ input {
 section {
   overflow: visible;
 }
+/* ----- HERO PROGRAMME ----- */
+.hero-programme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 6%;
+  background: linear-gradient(120deg, #111, #2b2b2b);
+  color: white;
+  gap: 40px;
+}
+
+.hero-programme .hero-content {
+  max-width: 50%;
+}
+
+.hero-programme h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-programme p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-programme .cta {
+  background: #ff5e3a;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.hero-programme .cta:hover {
+  background: #ff3c18;
+  transform: scale(1.05);
+}
+
+.hero-programme .hero-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  object-fit: cover;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 850px) {
+  .hero-programme {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-programme .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-programme .hero-image img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.btn-retour {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(120deg, #000000 0%, #f97316 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 40px;
+  border: 2px solid #f97316;
+  float: right;
+  margin: 20px 20px 0 0;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+  transition: all 0.3s ease;
+}
+
+/* Hover amélioré */
+.btn-retour:hover {
+  background: linear-gradient(120deg, #111111 0%, #f97316 100%);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.5);
+  color: #fff;
+}
+.contact-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.contact-buttons .cta {
+  flex: 1;
+  text-align: center;
+}
+
+.contact-buttons #deleteBtn {
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+}
+
+.contact-buttons #saveBtn {
+  background: linear-gradient(135deg, #f97316, #fb923c);
+}
+.saved-messages {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.saved-message {
+  background: linear-gradient(135deg, #fff7ed, #fff3e0);
+  border-left: 5px solid var(--primary);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  position: relative;
+  animation: fadeUp 0.5s ease;
+}
+
+.saved-message strong {
+  display: block;
+  color: var(--dark);
+  margin-bottom: 3px;
+}
+
+.saved-message p {
+  margin: 5px 0;
+  color: var(--gray);
+}
+
+.saved-message .delete-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.saved-message .delete-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(229,62,62,0.5);
+}

@@ -42,9 +42,9 @@
 
     <h3>Réseaux sociaux</h3>
     <div class="socials">
-      <a><i class="fab fa-facebook"></i></a>
-      <a><i class="fab fa-instagram"></i></a>
-      <a><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/FitLifeMadagascar" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/FitLifeMadagascar" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@FitLifeMadagascar" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
 
     <h3>Horaires</h3>
@@ -57,30 +57,38 @@
 
   <div class="contact-box" id="start">
 
-    <h2>Envoyer un message</h2>
-    <form id="contactForm">
+  <h2>Envoyer un message</h2>
+  <form id="contactForm">
 
-  <div class="field">
-    <i class="fa-solid fa-user"></i>
-    <input id="contactName" type="text" placeholder="Nom complet" required>
-  </div>
+    <div class="field">
+      <i class="fa-solid fa-user"></i>
+      <input id="contactName" type="text" placeholder="Nom complet" required>
+    </div>
 
-  <div class="field">
-    <i class="fa-solid fa-envelope"></i>
-    <input id="contactEmail" type="email" placeholder="Adresse email" required>
-  </div>
+    <div class="field">
+      <i class="fa-solid fa-envelope"></i>
+      <input id="contactEmail" type="email" placeholder="Adresse email" required>
+    </div>
 
-  <div class="field">
-    <i class="fa-solid fa-comment"></i>
-    <textarea id="contactMessage" placeholder="Votre message"></textarea>
-  </div>
+    <div class="field">
+      <i class="fa-solid fa-comment"></i>
+      <textarea id="contactMessage" placeholder="Votre message" required></textarea>
+    </div>
 
-  <button type="submit" class="cta">Envoyer</button>
+    <div class="contact-buttons">
+      <button id="saveBtn" class="cta">Sauvegarder</button>
+      <button type="submit" class="cta">Envoyer</button>
+    </div>
 
-  <p id="formStatus"></p>
-</form>
+    <p id="formStatus"></p>
+  </form>
 
-  </div>
+<h3>Messages sauvegardés</h3>
+<div id="savedMessages" class="saved-messages"></div>
+
+
+</div>
+
 
 </section>
 
