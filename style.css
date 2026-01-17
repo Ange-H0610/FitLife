@@ -781,3 +781,17 @@ input {
     font-size: 1rem;
   }
 }
+/* ===== FIX BOUTON COMMENCER ===== */
+.cta {
+  position: relative;
+  z-index: 999;
+  pointer-events: auto;
+}
+
+.card {
+  overflow: visible !important;
+}
+
+section {
+  overflow: visible;
+}

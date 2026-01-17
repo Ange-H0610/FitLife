@@ -55,30 +55,31 @@
     </ul>
   </div>
 
-  <div class="contact-box">
+  <div class="contact-box" id="start">
+
     <h2>Envoyer un message</h2>
     <form id="contactForm">
 
-      <div class="field">
-        <i class="fa-solid fa-user"></i>
-        <input type="text" placeholder="Nom complet" required>
-      </div>
+  <div class="field">
+    <i class="fa-solid fa-user"></i>
+    <input id="contactName" type="text" placeholder="Nom complet" required>
+  </div>
 
-      <div class="field">
-        <i class="fa-solid fa-envelope"></i>
-        <input type="email" placeholder="Adresse email" required>
-      </div>
+  <div class="field">
+    <i class="fa-solid fa-envelope"></i>
+    <input id="contactEmail" type="email" placeholder="Adresse email" required>
+  </div>
 
-      <div class="field">
-        <i class="fa-solid fa-comment"></i>
-        <textarea placeholder="Votre message"></textarea>
-      </div>
+  <div class="field">
+    <i class="fa-solid fa-comment"></i>
+    <textarea id="contactMessage" placeholder="Votre message"></textarea>
+  </div>
 
-      <button type="submit" class="cta">
-        Envoyer
-      </button>
+  <button type="submit" class="cta">Envoyer</button>
 
-    </form>
+  <p id="formStatus"></p>
+</form>
+
   </div>
 
 </section>

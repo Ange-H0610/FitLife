@@ -1,57 +1,8 @@
-let poidsData = JSON.parse(localStorage.getItem("poidsData")) || [];
+/* ================================
+   FITLIFE — SCRIPT PRINCIPAL
+   CLEAN & SAFE (NO LINK BLOCK)
+================================ */
 
-function sauverProfil() {
-  const profil = {
-    nom: nom.value,
-    age: age.value,
-    taille: taille.value
-  };
-  localStorage.setItem("profil", JSON.stringify(profil));
-  alert("Profil sauvegardé");
-}
-
-function calculIMC() {
-  const poids = parseFloat(document.getElementById("poids").value);
-  const taille = JSON.parse(localStorage.getItem("profil"))?.taille / 100;
-  if (!poids || !taille) return;
-
-  const imc = (poids / (taille * taille)).toFixed(1);
-  imcResult.textContent = "IMC: " + imc;
-}
-
-function ajouterPoids() {
-  const date = datePoids.value;
-  const poids = poidsJour.value;
-  if (!date || !poids) return;
-
-  poidsData.push({ date, poids });
-  localStorage.setItem("poidsData", JSON.stringify(poidsData));
-  afficherPoids();
-}
-
-function afficherPoids() {
-  listePoids.innerHTML = "";
-  poidsData.forEach(p => {
-    const li = document.createElement("li");
-    li.textContent = `${p.date} : ${p.poids} kg`;
-    listePoids.appendChild(li);
-  });
-}
-
-if (document.getElementById("poidsJour")) {
-  afficherPoids();
-}
-
-// Scroll intelligent pour CTA
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
 // ===== MENU BURGER RESPONSIVE =====
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menuToggle");
@@ -63,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.toggle("menu-open");
     });
 
-    // Fermer le menu après clic sur un lien
+    // Fermer menu après clic lien
     navMenu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         navMenu.classList.remove("active");
@@ -72,7 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-// ===== CONTACT FORM =====
+
+// ===== CONTACT FORM (FRONT-END) =====
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 
@@ -80,9 +32,9 @@ if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const name = contactName.value.trim();
-    const email = contactEmail.value.trim();
-    const message = contactMessage.value.trim();
+    const name = document.getElementById("contactName").value.trim();
+    const email = document.getElementById("contactEmail").value.trim();
+    const message = document.getElementById("contactMessage").value.trim();
 
     if (!name || !email || !message) {
       formStatus.style.color = "#ef4444";
@@ -90,6 +42,7 @@ if (contactForm) {
       return;
     }
 
+    // Simulation envoi (frontend only)
     formStatus.style.color = "#22c55e";
     formStatus.textContent = "Message envoyé avec succès ✅";
 
